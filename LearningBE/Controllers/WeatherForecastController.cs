@@ -17,14 +17,14 @@ namespace LearningBE.Controllers
         }
 
         //Get all
-        [HttpGet]
+        [HttpGet("getall")]
         public async Task<List<WeatherForecast>> Get()
         {
             return await _weatherCollection.Find(_ => true).ToListAsync();
         }
 
         //get by id
-        [HttpGet("{id:length(24)}")]
+        [HttpGet("getById/{id:length(24)}")]
         public async Task<ActionResult<WeatherForecast>> Get(string id)
         {
             var forecast = await _weatherCollection.Find(x => x.Id == id).FirstOrDefaultAsync();
@@ -32,7 +32,7 @@ namespace LearningBE.Controllers
             return Ok(forecast);
         }
         //create
-        [HttpPost]
+        [HttpPost("create")]
         public async Task<IActionResult> Post(WeatherForecast forecast)
         {
             // Lưu một bản ghi mới vào MongoDB
@@ -41,7 +41,7 @@ namespace LearningBE.Controllers
         }
 
         //update by id
-        [HttpPut("{id:length(24)}")]
+        [HttpPut("update/{id:length(24)}")]
         public async Task<IActionResult> Update(string id, WeatherForecast updatedForecast)
         {
             var forecast = await _weatherCollection.Find(x => x.Id == id).FirstOrDefaultAsync();
@@ -52,7 +52,7 @@ namespace LearningBE.Controllers
         }
 
         //delete
-        [HttpDelete("{id:length(24)}")]
+        [HttpDelete("delete/{id:length(24)}")]
         public async Task<IActionResult> Delete(string id)
         {
             var result = await _weatherCollection.DeleteOneAsync(x => x.Id == id);
