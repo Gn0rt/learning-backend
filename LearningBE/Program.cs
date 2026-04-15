@@ -38,6 +38,9 @@ builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
     });
 //đăng ký company service
 builder.Services.AddScoped<CompanyService>();
+//đăng ký user service
+builder.Services.AddScoped<UserService>();
+
 
 var app = builder.Build();
 
