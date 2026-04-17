@@ -1,3 +1,7 @@
+![.NET](https://img.shields.io/badge/.NET-6%2B-blue)
+![MongoDB](https://img.shields.io/badge/Database-MongoDB-green)
+![License](https://img.shields.io/badge/license-MIT-blue)
+
 # 🚀 Learning Backend API
 
 **ASP.NET Core Web API + MongoDB + JWT Authentication**
