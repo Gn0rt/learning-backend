@@ -80,7 +80,7 @@ LearningBE/
 
 - .NET SDK (6/7/8)
 - MongoDB (Local hoặc MongoDB Atlas)
------
+
 **2️⃣ Configuration**
 
 Cập nhật appsettings.json:
@@ -90,7 +90,7 @@ Cập nhật appsettings.json:
   "DatabaseName": "LearningBEDB"
 }
 ```
------
+
 **3️⃣ Run Project**
 
 cd LearningBE
@@ -114,7 +114,6 @@ https://localhost:7182/swagger
 
 Gọi API login để lấy JWT Token
 
------
 **📦 Step 2: Gửi Token**
 
 Thêm vào Header:
