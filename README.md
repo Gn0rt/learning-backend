@@ -39,13 +39,13 @@ Bro cần cấu hình thông tin kết nối trong file appsettings.json:
 3. Cách chạy Project
 **MacOS**
 Dùng Terminal và thực hiện các lệnh sau:
-# Di chuyển vào thư mục dự án
+### Di chuyển vào thư mục dự án
 cd LearningBE
 
-# Khôi phục các gói NuGet
+### Khôi phục các gói NuGet
 dotnet restore
 
-# Chạy ứng dụng
+### Chạy ứng dụng
 dotnet run
 
 Sau khi chạy, API sẽ hoạt động tại các cổng mặc định (ví dụ: https://localhost:7182)
