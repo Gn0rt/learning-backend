@@ -42,7 +42,7 @@ Dự án này mô phỏng một hệ thống Backend hoàn chỉnh với các ch
 - Tích hợp **Swagger UI**
 - Test API tại /swagger
 -----
-**🛠 Tech Stack**
+## 🛠 Tech Stack
 
 |**Category**|**Technology**|
 | :- | :- |
@@ -53,7 +53,7 @@ Dự án này mô phỏng một hệ thống Backend hoàn chỉnh với các ch
 |Libraries|MongoDB.Driver, Microsoft.AspNetCore.Authentication.JwtBearer|
 
 -----
-**📁 Project Structure**
+## 📁 Project Structure
 
 LearningBE/
 
