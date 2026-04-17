@@ -36,8 +36,7 @@ Bro cần cấu hình thông tin kết nối trong file appsettings.json:
   "DatabaseName": "LearningBEDB"
 }
 ```
-3. Cách chạy Project
-**MacOS**
+3. Cách chạy Project (Visual Studio Code) /n
 Dùng Terminal và thực hiện các lệnh sau:
 ### Di chuyển vào thư mục dự án
 ```cd LearningBE```
