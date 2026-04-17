@@ -40,13 +40,13 @@ Bro cần cấu hình thông tin kết nối trong file appsettings.json:
 **MacOS**
 Dùng Terminal và thực hiện các lệnh sau:
 ### Di chuyển vào thư mục dự án
-cd LearningBE
+```cd LearningBE```
 
 ### Khôi phục các gói NuGet
-dotnet restore
+```dotnet restore```
 
 ### Chạy ứng dụng
-dotnet run
+```dotnet run```
 
 Sau khi chạy, API sẽ hoạt động tại các cổng mặc định (ví dụ: https://localhost:7182)
 . Bro có thể truy cập /swagger để xem danh sách API
