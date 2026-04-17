@@ -1,16 +1,16 @@
-**🚀 Learning Backend API**
+# 🚀 Learning Backend API
 
 **ASP.NET Core Web API + MongoDB + JWT Authentication**
 
 📌 Backend project xây dựng theo hướng **clean, scalable, production-ready** sử dụng ASP.NET Core và MongoDB.
 
 -----
-**✨ Overview**
+## ✨ Overview**
 
 Dự án này mô phỏng một hệ thống Backend hoàn chỉnh với các chức năng quản lý và xác thực người dùng, phù hợp để học tập và làm nền tảng cho các dự án thực tế.
 
 -----
-**🔥 Features**
+## 🔥 Features
 
 **🧩 Core Modules**
 
@@ -74,7 +74,7 @@ LearningBE/
 └── Program.cs
 
 -----
-**⚙️ Getting Started**
+## ⚙️ Getting Started
 
 **1️⃣ Requirements**
 
@@ -84,15 +84,12 @@ LearningBE/
 **2️⃣ Configuration**
 
 Cập nhật appsettings.json:
-
+```
 "MongoDbSettings": {
-
-`  `"ConnectionString": "mongodb://localhost:27017",
-
-`  `"DatabaseName": "LearningBEDB"
-
+  "ConnectionString": "mongodb://localhost:27017",
+  "DatabaseName": "LearningBEDB"
 }
-
+```
 -----
 **3️⃣ Run Project**
 
@@ -104,14 +101,14 @@ dotnet run
 
 📍 API chạy tại:
 
-https://localhost:7182
+https://localhost:7182 (tùy theo từng máy)
 
 📄 Swagger UI:
 
 https://localhost:7182/swagger
 
 -----
-**🔐 Authentication Guide**
+## 🔐 Authentication Guide**
 
 **🔑 Step 1: Login**
 
@@ -125,25 +122,10 @@ Thêm vào Header:
 Authorization: Bearer <your\_token>
 
 -----
-**🧠 Design Principles**
-
-- Separation of Concerns
-- Clean & Maintainable Code
-- Scalable Architecture
-- Easy to extend & test
------
-**🚧 Future Improvements**
-
-- Role-based Authorization (RBAC)
-- Refresh Token
-- Logging (Serilog)
-- Dockerize project
-- Deploy lên Cloud (Render / Railway / Azure)
------
 **👨‍💻 Author**
 
 **Bui Trong**\
-Backend Developer (ASP.NET Core)
+Web Developer (ASP.NET Core)
 
 -----
 **⭐️ Show your support**
