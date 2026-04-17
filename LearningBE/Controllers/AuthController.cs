@@ -1,4 +1,5 @@
 ﻿using LearningBE.Models.Entities;
+using LearningBE.Repositories;
 using LearningBE.Services;
 using Microsoft.AspNetCore.Identity.Data;
 using Microsoft.AspNetCore.Mvc;
@@ -16,20 +17,25 @@ namespace LearningBE.Controllers
     {
         private readonly IConfiguration _config;
         private readonly UserService _userService; // Dùng UserService bro đã viết để check user
-        public AuthController(IConfiguration config, UserService userService)
+        private readonly UserRepository _userRepo;
+        public AuthController(IConfiguration config, UserService userService, UserRepository userRepo)
         {
             _config = config;
             _userService = userService;
+            _userRepo = userRepo;
         }
         public class LoginRequest { public string Username { get; set; } public string Password { get; set; } }
         [HttpPost("login")]
         public async Task<IActionResult> Login([FromBody] LoginRequest login)
         {
-            var users = await _userService.GetAllAsync();
-            var user = users.FirstOrDefault(u => u.Username == login.Username && u.Password == login.Password);
+            //var users = await _userService.GetListUserAsync();
+            var userEntity = await _userRepo.GetByUsernameAsync(login.Username);
+            if (userEntity == null || userEntity.Password != login.Password)
+            {
+                return Unauthorized("Sai tài khoản hoặc mật khẩu");
+            }
 
-            if (user == null) return Unauthorized("Sai tài khoản hoặc mật khẩu");
-            var token = GenerateJwtToken(user);
+            var token = GenerateJwtToken(userEntity);
             return Ok(new { token });
         }
 

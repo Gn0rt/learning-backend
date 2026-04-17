@@ -13,10 +13,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Models\DTOs\" />
     <Folder Include="Configurations\" />
     <Folder Include="Middlewares\" />
-    <Folder Include="Repositories\" />
   </ItemGroup>
 
 </Project>

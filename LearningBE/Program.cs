@@ -1,4 +1,5 @@
 ﻿using LearningBE.Models;
+using LearningBE.Repositories;
 using LearningBE.Services;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.IdentityModel.Tokens;
@@ -73,12 +74,16 @@ builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
             ClockSkew = TimeSpan.Zero // Token hết hạn là cook luôn, không chờ đợi
         };
     });
-//đăng ký company service
+//--- Đăng ký Service ---
+//company service
 builder.Services.AddScoped<CompanyService>();
-//đăng ký user service
+//user service
 builder.Services.AddScoped<UserService>();
-//đăng ký device service
+//device service
 builder.Services.AddScoped<DeviceService>();
+
+//--- Đăng ký Repository ---
+builder.Services.AddScoped<UserRepository>();
 
 
 var app = builder.Build();
