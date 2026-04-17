@@ -30,7 +30,7 @@ builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
         options.TokenValidationParameters = new TokenValidationParameters
         {
             ValidateIssuerSigningKey = true,
-            IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes("Chuoi_Secret_Sieu_Bao_Mat_Cua_Bro_123")),
+            IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes("Chuoi_Secret_Sieu_Bao_Mat_123")),
             ValidateIssuer = false,
             ValidateAudience = false,
             ClockSkew = TimeSpan.Zero // Token hết hạn là cook luôn, không chờ đợi
@@ -40,6 +40,8 @@ builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
 builder.Services.AddScoped<CompanyService>();
 //đăng ký user service
 builder.Services.AddScoped<UserService>();
+//đăng ký device service
+builder.Services.AddScoped<DeviceService>();
 
 
 var app = builder.Build();
