@@ -1,5 +1,5 @@
 ![.NET](https://img.shields.io/badge/.NET-6/7/8%2B-blue)
-![MongoDB](https://img.shields.io/badge/Database-MongoDB-green)
+![MongoDB](https://img.shields.io/badge/Database-MongoDB-8A2BE2)
 
 # 🚀 Learning Backend API
 
