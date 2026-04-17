@@ -30,6 +30,13 @@ namespace LearningBE.Controllers
             if (company is null) return NotFound();
             return Ok(company);
         }
+        [HttpGet("getByMaXN/{maxn:int}")]
+        public async Task<ActionResult<Company>> Get(int maxn)
+        {
+            var company = await _companyService.GetByMaXNAsync(maxn);
+            if (company is null) return NotFound();
+            return Ok(company);
+        }
         [HttpPost("create")]
         public async Task<IActionResult> Post(Company company)
         {

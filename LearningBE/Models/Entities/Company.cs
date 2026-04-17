@@ -8,6 +8,7 @@ namespace LearningBE.Models.Entities
         [BsonId]
         [BsonRepresentation(BsonType.ObjectId)]
         public string? Id { get; set; }
+        public int MaXN { get; set; }
         public string Name { get; set; } = null!;
         public string Address { get; set; } = null!;
         [BsonElement("createdAt")] // Mapping tên field trong DB là chữ thường cho chuẩn Mongo
