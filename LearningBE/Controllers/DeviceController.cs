@@ -1,8 +1,10 @@
-﻿using LearningBE.Services;
+﻿using LearningBE.Models.Entities;
+using LearningBE.Services;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
-using LearningBE.Models.Entities;
 namespace LearningBE.Controllers
 {
+    [Authorize]
     [ApiController]
     [Route("api/[controller]")]
     public class DeviceController : ControllerBase

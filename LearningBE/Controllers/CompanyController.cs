@@ -5,7 +5,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace LearningBE.Controllers
 {
-    //[Authorize] // Phải có Token mới vào được đây
+    [Authorize] // Phải có Token mới vào được đây
     [ApiController]
     [Route("api/[controller]")]
     public class CompanyController : ControllerBase
