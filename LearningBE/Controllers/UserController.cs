@@ -18,9 +18,12 @@ namespace LearningBE.Controllers
         }
 
         [HttpGet("getall")]
-        public async Task<List<UserResponse>> Get()
+        public async Task<ActionResult<List<UserResponse>>> Get()
         {
-            return await _userService.GetListUserAsync();
+            var result = await _userService.GetListUserAsync();
+            if (result == null || result.Count == 0)
+                return NotFound("No users found");
+            return Ok(result);
         }
 
         [HttpGet("getById/{id:Length(24)}")]

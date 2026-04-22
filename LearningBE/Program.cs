@@ -36,7 +36,8 @@ builder.Services.AddSwaggerGen(c =>
                       \r\n\r\nExample: 'Bearer 12345abcdef'",
         Name = "Authorization",
         In = ParameterLocation.Header,
-        Type = SecuritySchemeType.ApiKey,
+        BearerFormat = "JWT",
+        Type = SecuritySchemeType.Http,
         Scheme = "Bearer"
     });
 
@@ -84,6 +85,8 @@ builder.Services.AddScoped<DeviceService>();
 
 //--- Đăng ký Repository ---
 builder.Services.AddScoped<UserRepository>();
+builder.Services.AddScoped<CompanyRepository>();
+
 
 
 var app = builder.Build();
