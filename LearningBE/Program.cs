@@ -1,6 +1,7 @@
 ﻿using LearningBE.Models;
 using LearningBE.Repositories;
 using LearningBE.Services;
+using LearningBE.Services.Interfaces;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
@@ -77,9 +78,9 @@ builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
     });
 //--- Đăng ký Service ---
 //company service
-builder.Services.AddScoped<CompanyService>();
+builder.Services.AddScoped<ICompanyService ,CompanyService>();
 //user service
-builder.Services.AddScoped<UserService>();
+builder.Services.AddScoped<IUserService, UserService>();
 //device service
 builder.Services.AddScoped<DeviceService>();
 

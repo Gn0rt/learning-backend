@@ -24,7 +24,10 @@ namespace LearningBE.Controllers
             _userService = userService;
             _userRepo = userRepo;
         }
-        public class LoginRequest { public string Username { get; set; } public string Password { get; set; } }
+        public class LoginRequest { 
+            public string Username { get; set; } 
+            public string Password { get; set; } 
+        }
         [HttpPost("login")]
         public async Task<IActionResult> Login([FromBody] LoginRequest login)
         {

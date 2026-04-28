@@ -1,11 +1,12 @@
-using MongoDB.Driver;
+﻿using MongoDB.Driver;
 using LearningBE.Models.Entities;
 using LearningBE.Repositories;
 using LearningBE.Models.DTOs;
 using System.Linq;
+using LearningBE.Services.Interfaces;
 namespace LearningBE.Services
 {
-    public class UserService
+    public class UserService : IUserService
     {
         private readonly UserRepository _userRepo;
         public UserService(UserRepository userRepo)
@@ -44,7 +45,7 @@ namespace LearningBE.Services
             await _userRepo.DeleteAsync(id);
             return true;
         }
-        // H�m ph? tr? Map t? Entity sang DTO 
+        // Hàm phụ trợ Map từ Entity sang DTO 
         private UserResponse MapToDTO(User u) => new UserResponse
         {
             Id = u.Id,
